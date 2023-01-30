@@ -5,7 +5,7 @@ FROM tomcat:8-jdk8
 WORKDIR /app
 
 # Copy the HTML code to the working directory
-COPY /GudditiNaganjaneyulu/. .
+COPY /data/. .
 
 # Package the HTML code into a WAR file
 RUN jar -cvf resume.war .
