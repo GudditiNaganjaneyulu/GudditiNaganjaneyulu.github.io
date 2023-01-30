@@ -1,0 +1,13 @@
+version: 2.1
+jobs:
+  run_commands:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      - run:
+          name: Execute ad-hoc command
+          command: sh build.sh
+workflows:
+  test_my_app:
+    jobs:
+      - run_commands
